@@ -4,8 +4,8 @@ const nodemon = require('gulp-nodemon');
 const sass = require('gulp-sass');
 
 const paths = {
-  jsSource: ['./js/app.js', './js/**/*.js'],
-  scssSource: './styles/**/*.scss',
+  javaScriptSource: ['./js/app.js', './js/**/*.js'],
+  stylesSource: './styles/**/*.scss',
   server: './server.js'
 };
 
@@ -15,21 +15,21 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('js-bundle', () => {
-  gulp.src(paths.jsSource)
+gulp.task('scripts', () => {
+  gulp.src(paths.javaScriptSource)
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./public/dist'));
 });
 
 gulp.task('styles', () => {
-  gulp.src(paths.scssSource)
+  gulp.src(paths.stylesSource)
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('./public/dist'));
 });
 
 gulp.task('watch', () => {
-  gulp.watch(paths.jsSource, ['js-bundle']);
-  gulp.watch(paths.scssSource, ['styles']);
+  gulp.watch(paths.javaScriptSource, ['scripts']);
+  gulp.watch(paths.stylesSource, ['styles']);
 });
 
-gulp.task('default', ['watch', 'serve', 'js-bundle', 'styles']);
+gulp.task('default', ['watch', 'serve', 'scripts', 'styles']);
