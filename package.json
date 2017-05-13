@@ -1,0 +1,33 @@
+{
+  "name": "clipboard",
+  "version": "1.0.0",
+  "description": "sports sports sports",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "basketball",
+    "football",
+    "soccer",
+    "baseball"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.11",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^0.4.2",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "jquery": "^3.1.1",
+    "nodemon": "^1.11.0",
+    "parse": "^1.9.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
