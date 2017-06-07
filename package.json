@@ -21,6 +21,7 @@
     "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "jquery": "^3.1.1",
+    "node-stattleship": "^1.1.1",
     "nodemon": "^1.11.0",
     "parse": "^1.9.2"
   },

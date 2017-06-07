@@ -19,13 +19,3 @@ angular.module('clipBoardApp', ['ui.router','ui.bootstrap'])
       // $urlRouterProvider
       // .otherwise('home');
 });
-
-angular.module('clipBoardApp')
-  .controller('homeController', function($scope){
-    console.log("This is home!");
-  });
-
-angular.module('clipBoardApp')
-  .controller('testController', function($scope){
-    console.log("COOL!");
-  });

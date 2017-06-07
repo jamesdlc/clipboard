@@ -1,6 +1,22 @@
 var express = require('express');
 var app = express();
 var bodyParse = require('body-parser');
+var secretKeys = require('./secretKeys');
+
+var StattleshipAPI = require('node-stattleship');
+
+console.log("ship API", StattleshipAPI);
+var stattleship = new StattleshipAPI(secretKeys.accessKey);
+
+var params = {
+  team_id: "mlb-bos"
+};
+
+stattleship.players('baseball', 'mlb', params).then(function(players) {
+  players.forEach(function(element, index, array) {
+    console.log(element.name);
+  });
+});
 
 app.use(bodyParse.json());
 
